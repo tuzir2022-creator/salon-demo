@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F6EDE8">
+<title>Салон красоты в Подмосковье - демонстрационный макет</title>
+<meta name="description" content="Салон красоты: услуги с ценами, мастера, отзывы, адрес и онлайн-запись. Демонстрационный макет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+/* Hallmark · genre: editorial · macrostructure: Split Studio (каждый блок делит экран: заголовок слева, содержимое справа, направление чередуется) · tone: soft, luxury · theme: custom (слива и лепесток) · nav: N9 edge-aligned · footer: Ft2 inline
+   Палитра: бумага тёплый лепесток, чернила слива, акцент пудрово-розовая глина; шрифты Prata (заголовки, roman) + Manrope (текст), кириллица, OFL.
+   Pre-emit critique: P4 H4 E4 S4 R5 V4 */
+:root{
+  --color-paper:#F6EDE8;
+  --color-paper-2:#EBDDD6;
+  --color-ink:#2B1A24;
+  --color-ink-2:#6A5560;
+  --color-line:#D9C6BF;
+  --color-accent:#A8456A;
+  --color-accent-ink:#7E2F4F;
+  --color-plum:#3A1F2E;
+  --color-petal:#E8B8C0;
+  --color-sand:#D9BFA8;
+  --color-white:#FFFAF7;
+  --color-need:#8F7212;
+  --font-display:'Prata',Georgia,serif;
+  --font-body:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --space-xs:.5rem; --space-sm:1rem; --space-md:1.5rem; --space-lg:3rem; --space-xl:5.5rem;
+  --radius-pill:999px; --radius-sm:14px;
+  --ease-out:cubic-bezier(.2,.7,.2,1);
+  --edge:max(1.25rem,env(safe-area-inset-left),env(safe-area-inset-right));
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--color-paper);color:var(--color-ink);font-family:var(--font-body);font-size:1.0625rem;line-height:1.65;
+  padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;font-style:normal;line-height:1.08;margin:0;overflow-wrap:anywhere;min-width:0;hyphens:manual}
+p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:var(--edge);padding-right:var(--edge)}
+:focus-visible{outline:3px solid var(--color-accent);outline-offset:3px;border-radius:4px}
+.need{color:var(--color-need);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;min-height:48px;padding:.75rem 1.7rem;border-radius:var(--radius-pill);
+  font:600 1rem/1 var(--font-body);text-decoration:none;border:1.5px solid var(--color-plum);cursor:pointer;
+  transition:background-color .2s var(--ease-out),color .2s var(--ease-out),border-color .2s var(--ease-out),opacity .2s var(--ease-out)}
+.btn-main{background:var(--color-plum);color:var(--color-white)}
+.btn-main:hover{background:var(--color-accent-ink);border-color:var(--color-accent-ink)}
+.btn-line{background:transparent;color:var(--color-plum)}
+.btn-line:hover{background:var(--color-plum);color:var(--color-white)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn:active:not(:disabled){transform:translateY(1px)}
+
+/* шапка: слева название, справа ссылки у края */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--color-paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--color-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:66px}
+.brand{font:400 1.45rem/1 var(--font-display);text-decoration:none;white-space:nowrap}
+.nav{display:none;gap:1.75rem}
+.nav a{text-decoration:none;font-size:.93rem;color:var(--color-ink-2);white-space:nowrap}
+.nav a:hover{color:var(--color-accent)}
+@media(min-width:960px){.nav{display:flex}}
+.top .btn{min-height:44px;padding:.6rem 1.25rem;font-size:.93rem}
+@media(max-width:420px){.brand{font-size:1.15rem;white-space:normal;line-height:1.1}.top .btn{padding:.6rem .9rem;font-size:.88rem;flex:none}}
+
+/* первый экран */
+.hero{padding:var(--space-lg) 0 var(--space-xl)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(1.5rem,5vw,4.5rem);align-items:center}
+.hero h1{font-size:clamp(2.7rem,6.2vw,5.2rem)}
+.hero .lead{margin-top:var(--space-md);max-width:33rem;color:var(--color-ink-2);font-size:1.15rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--space-lg)}
+.hero .facts{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin:var(--space-md) 0 0;padding:0;list-style:none;color:var(--color-ink-2);font-size:.95rem}
+.hero .facts li::before{content:"";display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--color-accent);margin-right:.55rem;vertical-align:.1em}
+.arches{position:relative;justify-self:center;width:min(100%,340px);aspect-ratio:3/4}
+.arches span{position:absolute;bottom:0;border-radius:999px 999px 0 0}
+.arches .a1{left:0;width:60%;height:72%;background:var(--color-petal)}
+.arches .a2{right:0;width:52%;height:92%;background:var(--color-plum)}
+.arches .a3{left:30%;width:38%;height:50%;background:var(--color-sand);border:3px solid var(--color-paper)}
+.arches .dot{left:auto;right:12%;bottom:auto;top:6%;width:14%;aspect-ratio:1;border-radius:50%;background:var(--color-accent)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.arches{width:170px;justify-self:start}}
+
+/* секции: заголовок слева, содержимое справа; в чётных блоках зеркально */
+section{padding:var(--space-xl) 0;border-top:1px solid var(--color-line)}
+.split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.5rem,5vw,5rem);align-items:start}
+.split.flip{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.split.flip>.side{order:2}
+.side{position:sticky;top:96px}
+.sec-title{font-size:clamp(2rem,4vw,3.1rem)}
+.sec-lead{color:var(--color-ink-2);margin-top:var(--space-sm);max-width:30rem}
+@media(max-width:860px){.split,.split.flip{grid-template-columns:minmax(0,1fr)}.split.flip>.side{order:0}.side{position:static}}
+
+/* услуги: группы со строками прайса */
+.group+.group{margin-top:var(--space-lg)}
+.group h3{font-size:1.25rem;color:var(--color-accent-ink);margin-bottom:.4rem}
+.rows{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--color-ink)}
+.rows li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem 1.25rem;padding:1.05rem 0;border-bottom:1px solid var(--color-line);align-items:baseline}
+.rows b{font-weight:600}
+.rows small{grid-column:1;color:var(--color-ink-2);font-size:.92rem}
+.rows .price{grid-column:2;grid-row:1;white-space:nowrap}
+@media(max-width:520px){.rows li{grid-template-columns:minmax(0,1fr)}.rows .price{grid-column:1;grid-row:auto}}
+
+/* мастера */
+.masters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-md)}
+.master .ph{aspect-ratio:4/5;border-radius:999px 999px var(--radius-sm) var(--radius-sm);display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:var(--space-md);font-size:.88rem}
+.master:nth-child(1) .ph{background:var(--color-petal)}
+.master:nth-child(2) .ph{background:var(--color-sand)}
+.master:nth-child(3) .ph{background:var(--color-paper-2);border:1.5px dashed var(--color-ink-2)}
+.master:nth-child(4) .ph{background:var(--color-petal)}
+.master h3{font-size:1.25rem;margin-top:var(--space-sm)}
+.master p{color:var(--color-ink-2);font-size:.95rem;margin-top:.2rem}
+@media(max-width:420px){.masters{grid-template-columns:minmax(0,1fr)}}
+
+/* как записаться */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-md)}
+.steps li{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:var(--space-sm);align-items:start}
+.steps .ico{width:3rem;height:3rem;border-radius:50%;border:1.5px solid var(--color-accent);display:flex;align-items:center;justify-content:center;color:var(--color-accent-ink)}
+.steps .ico svg{width:1.5rem;height:1.5rem}
+.steps h3{font-size:1.3rem;margin-bottom:.15rem}
+.steps p{color:var(--color-ink-2)}
+
+/* отзывы */
+.reviews{display:grid;gap:var(--space-md)}
+.review{border-left:3px solid var(--color-petal);padding:.2rem 0 .2rem var(--space-md)}
+.review p{font-size:1.1rem}
+.review .who{margin-top:.5rem;font-size:.92rem;color:var(--color-ink-2)}
+
+/* запись и контакты */
+.book{background:var(--color-plum);color:var(--color-white);border-top:none}
+.book .sec-lead{color:#E3CCD3}
+.book .need{color:#E8C86A}
+.book .btn-line{color:var(--color-white);border-color:#E3CCD3}
+.book .btn-line:hover{background:var(--color-white);color:var(--color-plum)}
+.book .btn-main{background:var(--color-petal);color:var(--color-plum);border-color:var(--color-petal)}
+.book .btn-main:hover{background:var(--color-white);border-color:var(--color-white)}
+.contacts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:var(--space-md)}
+.contacts .btn{min-height:44px;padding:.6rem 1.1rem;font-size:.95rem}
+.hours{margin-top:var(--space-md);color:#E3CCD3}
+.map{margin-top:var(--space-md);aspect-ratio:16/9;border:1.5px dashed #E3CCD3;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--space-sm);font-size:.9rem}
+form{display:grid;gap:var(--space-sm)}
+label.f{display:grid;gap:.35rem;font-weight:500;font-size:.95rem}
+input[type=text],input[type=tel],select{width:100%;min-height:48px;padding:.7rem .9rem;border:1.5px solid #8C6A7A;border-radius:var(--radius-sm);background:var(--color-white);font:400 1rem var(--font-body);color:var(--color-ink)}
+input[type=text]:hover,input[type=tel]:hover,select:hover{border-color:var(--color-petal)}
+.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.9rem;color:#E3CCD3}
+.consent input{width:22px;height:22px;margin-top:.15rem;accent-color:var(--color-petal);flex:none}
+.consent a{color:inherit}
+.msg{min-height:1.5rem;font-size:.95rem;color:var(--color-petal)}
+.book :focus-visible{outline-color:var(--color-petal)}
+
+footer{padding:var(--space-lg) 0 var(--space-xl);color:var(--color-ink-2);font-size:.9rem}
+footer .wrap{display:grid;gap:.5rem}
+
+/* слой анимации: маска для слов заголовков */
+.m-w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .02em .16em;margin-bottom:-.16em}
+.m-w>i{display:inline-block;font-style:inherit;will-change:transform}
+@media(prefers-reduced-motion:reduce){.m-w,.m-w>i{overflow:visible}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Салон <span class="need">&lt;&lt;название&gt;&gt;</span></a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#uslugi">Услуги и цены</a>
+      <a href="#mastera">Мастера</a>
+      <a href="#zapis-kak">Как записаться</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="btn btn-main" href="#kontakty">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Красота без спешки и очередей</h1>
+        <p class="lead">Салон красоты в <span class="need">&lt;&lt;город, Подмосковье&gt;&gt;</span>: стрижки и окрашивание, маникюр, уход за лицом, брови и ресницы. Запись онлайн, в удобное для вас время.</p>
+        <div class="cta">
+          <a class="btn btn-main" href="#kontakty">Записаться онлайн</a>
+          <a class="btn btn-line" href="#uslugi">Услуги и цены</a>
+        </div>
+        <ul class="facts">
+          <li>Запись за минуту, с телефона</li>
+          <li>Цены на сайте, без сюрпризов в кассе</li>
+          <li>Адрес и часы: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></li>
+        </ul>
+      </div>
+      <div class="arches" aria-hidden="true">
+        <span class="a1"></span><span class="a2"></span><span class="a3"></span><span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <section id="uslugi" aria-labelledby="uslugi-h">
+    <div class="wrap split">
+      <div class="side">
+        <h2 class="sec-title" id="uslugi-h">Услуги и цены</h2>
+        <p class="sec-lead">Структура прайса как пример. Реальные услуги, длительность и стоимость подставим из вашего списка.</p>
+      </div>
+      <div>
+        <div class="group">
+          <h3>Волосы</h3>
+          <ul class="rows">
+            <li><b>Женская стрижка</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+            <li><b>Окрашивание</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Цена зависит от длины, уточняется на консультации</small></li>
+            <li><b>Укладка</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Ногти</h3>
+          <ul class="rows">
+            <li><b>Маникюр с покрытием</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+            <li><b>Педикюр</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Лицо, брови и ресницы</h3>
+          <ul class="rows">
+            <li><b>Уход за лицом</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Программы и состав: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></small></li>
+            <li><b>Брови: коррекция и окрашивание</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+            <li><b>Наращивание ресниц</b><span class="price need">&lt;&lt;цена&gt;&gt;</span><small>Длительность: <span class="need">&lt;&lt;минут&gt;&gt;</span></small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mastera" aria-labelledby="mastera-h">
+    <div class="wrap split flip">
+      <div>
+        <div class="masters">
+          <div class="master"><div class="ph"><span class="need">&lt;&lt;фото мастера&gt;&gt;</span></div><h3><span class="need">&lt;&lt;Имя&gt;&gt;</span></h3><p>Стилист-колорист. Опыт и курсы: <span class="need">&lt;&lt;запросить&gt;&gt;</span></p></div>
+          <div class="master"><div class="ph"><span class="need">&lt;&lt;фото мастера&gt;&gt;</span></div><h3><span class="need">&lt;&lt;Имя&gt;&gt;</span></h3><p>Мастер ногтевого сервиса. Опыт и курсы: <span class="need">&lt;&lt;запросить&gt;&gt;</span></p></div>
+          <div class="master"><div class="ph"><span class="need">&lt;&lt;фото мастера&gt;&gt;</span></div><h3><span class="need">&lt;&lt;Имя&gt;&gt;</span></h3><p>Косметолог. Опыт и курсы: <span class="need">&lt;&lt;запросить&gt;&gt;</span></p></div>
+          <div class="master"><div class="ph"><span class="need">&lt;&lt;фото мастера&gt;&gt;</span></div><h3><span class="need">&lt;&lt;Имя&gt;&gt;</span></h3><p>Бровист и lash-мастер. Опыт и курсы: <span class="need">&lt;&lt;запросить&gt;&gt;</span></p></div>
+        </div>
+      </div>
+      <div class="side">
+        <h2 class="sec-title" id="mastera-h">Наши мастера</h2>
+        <p class="sec-lead">Фото, имена и специализации возьмём у вас. Сертификаты и дипломы можно сфотографировать и добавить рядом.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="zapis-kak" aria-labelledby="zapis-kak-h">
+    <div class="wrap split">
+      <div class="side">
+        <h2 class="sec-title" id="zapis-kak-h">Как записаться</h2>
+        <p class="sec-lead">Два пути: через онлайн-запись или короткую форму. Выберите тот, что удобнее.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+          <div><h3>Онлайн-запись в YClients</h3><p>Выбираете услугу, мастера и свободное время. Кнопка откроет вашу страницу записи: <span class="need">&lt;&lt;ссылка на YClients&gt;&gt;</span></p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.7 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></span>
+          <div><h3>Форма заявки</h3><p>Оставляете имя и телефон, заявка приходит администратору в Telegram, он перезванивает и подтверждает время.</p></div>
+        </li>
+        <li>
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <div><h3>Приходите</h3><p>Адрес и как добраться ниже, на карте. Мастер ждёт вас к назначенному времени.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="otzyvy" aria-labelledby="otzyvy-h">
+    <div class="wrap split flip">
+      <div class="reviews">
+        <div class="review"><p><span class="need">&lt;&lt;Отзыв клиента, дословно&gt;&gt;</span></p><p class="who"><span class="need">&lt;&lt;Имя, услуга&gt;&gt;</span></p></div>
+        <div class="review"><p><span class="need">&lt;&lt;Отзыв клиента, дословно&gt;&gt;</span></p><p class="who"><span class="need">&lt;&lt;Имя, услуга&gt;&gt;</span></p></div>
+        <div class="review"><p><span class="need">&lt;&lt;Отзыв клиента, дословно&gt;&gt;</span></p><p class="who"><span class="need">&lt;&lt;Имя, услуга&gt;&gt;</span></p></div>
+      </div>
+      <div class="side">
+        <h2 class="sec-title" id="otzyvy-h">Отзывы клиентов</h2>
+        <p class="sec-lead">Здесь будут настоящие отзывы с вашей карточки на Яндекс.Картах или из соцсетей. Выдуманных отзывов на сайте не бывает.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakty" class="book" aria-labelledby="kontakty-h">
+    <div class="wrap split">
+      <div>
+        <h2 class="sec-title" id="kontakty-h">Запишитесь на удобное время</h2>
+        <p class="sec-lead">Оставьте имя и телефон, администратор перезвонит. Или напишите в мессенджер.</p>
+        <div class="contacts">
+          <a class="btn btn-line" href="tel:+78888888888">+7 (888) 888-88-88</a>
+          <span class="btn btn-line need" aria-disabled="true">Telegram &lt;&lt;ссылка&gt;&gt;</span>
+          <span class="btn btn-line need" aria-disabled="true">MAX &lt;&lt;ссылка&gt;&gt;</span>
+          <span class="btn btn-line need" aria-disabled="true">ВКонтакте &lt;&lt;ссылка&gt;&gt;</span>
+        </div>
+        <p class="hours">Адрес: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span><br>Часы работы: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+        <div class="map"><span class="need">&lt;&lt;карта с адресом салона, подключим после получения адреса&gt;&gt;</span></div>
+      </div>
+      <form id="form" novalidate>
+        <label class="f">Ваше имя<input type="text" name="name" autocomplete="given-name" required></label>
+        <label class="f">Телефон<input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7" required></label>
+        <label class="f">Что хотите сделать
+          <select name="service">
+            <option>Пока не знаю, подскажите</option>
+            <option>Волосы</option>
+            <option>Ногти</option>
+            <option>Лицо</option>
+            <option>Брови и ресницы</option>
+          </select>
+        </label>
+        <label class="consent">
+          <input type="checkbox" id="agree">
+          <span>Я даю согласие на обработку персональных данных и принимаю <a href="#" class="need" onclick="return false">политику обработки данных &lt;&lt;запросить у заказчика&gt;&gt;</a>.</span>
+        </label>
+        <button class="btn btn-main" id="send" type="submit" disabled>Записаться</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Демонстрационный макет, не является официальным сайтом организации. Данные вымышленные.</p>
+    <p>Оператор персональных данных и реквизиты: <span class="need">&lt;&lt;запросить у заказчика&gt;&gt;</span></p>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="motion.js" defer></script>
+<script>
+(function(){
+  var agree=document.getElementById('agree'),send=document.getElementById('send'),form=document.getElementById('form'),msg=document.getElementById('msg');
+  agree.addEventListener('change',function(){send.disabled=!agree.checked;});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!agree.checked){return;}
+    msg.textContent='Это демо: заявка никуда не отправляется. В готовом сайте она придёт администратору в Telegram.';
+  });
+})();
+</script>
+</body>
+</html>
